@@ -6,23 +6,23 @@ import React from 'react'
 
 const Page: React.FC = () => {
   return (
-    <div>
-      <div className="mt-8">
-        <Hero />
-      </div>
-      
-      <div className="mt-8">
-        <Range />
-      </div>
+    <>
+    <div className="mt-8 lg:mt-12">
+  <Hero />
+</div>
 
-      <div className="mt-8">
-        <ProductList />
-      </div>
+<div className="mt-8 lg:mt-12">
+  <Range />
+</div>
 
-      <div className="mt-8">
-        <InspirationSection />
-      </div>
-    </div>
+<div className="mt-8 lg:mt-12">
+  <ProductList />
+</div>
+
+<div className="mt-8 lg:mt-12">
+  <InspirationSection />
+</div>
+</>
   )
 }
 

@@ -15,7 +15,7 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="bg-white shadow-md w-full fixed top-0 z-50">
-      <div className="container mx-auto flex justify-between items-center py-4 px-6">
+      <div className="container mx-auto flex justify-between items-center py-4 px-6 relative">
         {/* Logo */}
         <div className="text-2xl font-bold text-gray-800">
           <a href="/">Furniture</a>
@@ -23,11 +23,11 @@ const Navbar: React.FC = () => {
 
         {/* Links - Centered */}
         <ul
-          className={`hidden md:flex md:space-x-8 text-gray-600 font-medium absolute left-1/2 transform -translate-x-1/2`}
+          className="hidden md:flex md:space-x-8 text-gray-600 font-medium absolute left-1/2 transform -translate-x-1/2"
         >
           <li>
             <a href="/" className="hover:text-gray-800">
-            <span className="md:hidden">
+              <span className="md:hidden">
                 <BsHouseDoor />
               </span>
               Home
@@ -35,7 +35,7 @@ const Navbar: React.FC = () => {
           </li>
           <li>
             <a href="/shop" className="hover:text-gray-800">
-            <span className="md:hidden">
+              <span className="md:hidden">
                 <BsShop />
               </span>
               Shop
@@ -43,7 +43,7 @@ const Navbar: React.FC = () => {
           </li>
           <li>
             <a href="/blog" className="hover:text-gray-800">
-            <span className="md:hidden">
+              <span className="md:hidden">
                 <BsPencilSquare />
               </span>
               Blog
@@ -51,7 +51,7 @@ const Navbar: React.FC = () => {
           </li>
           <li>
             <a href="/contact" className="hover:text-gray-800">
-            <span className="md:hidden">
+              <span className="md:hidden">
                 <MdContactMail />
               </span>
               Contact

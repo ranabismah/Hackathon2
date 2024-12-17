@@ -144,6 +144,7 @@ const ProductList: React.FC = () => {
         </Button>
       </div>
     </section>
+
   );
 };
 
