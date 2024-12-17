@@ -1,22 +1,31 @@
-import Footer from '@/components/Footer'
 import Hero from '@/components/Hero'
 import InspirationSection from '@/components/Inspire'
-import Navbar from '@/components/Nav'
 import ProductList from '@/components/ProductList'
 import Range from '@/components/RangeCategory'
 import React from 'react'
 
-const page = () => {
+const Page: React.FC = () => {
   return (
     <div>
-    
-     <Hero/>
-     <Range/>
-     <ProductList/> 
-     <InspirationSection/>
-    
+      <div className="mt-8">
+        <Hero />
+      </div>
+      
+      <div className="mt-8">
+        <Range />
+      </div>
+
+      <div className="mt-8">
+        <ProductList />
+      </div>
+
+      <div className="mt-8">
+        <InspirationSection />
+      </div>
     </div>
   )
 }
 
-export default page
+export default Page
+
+
