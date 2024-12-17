@@ -1,5 +1,5 @@
-import React from 'react'
-import Image from 'next/image'
+import React from 'react';
+import Image from 'next/image';
 import CustomerCare from '@/components/CustomerCare';
 
 const Blog = () => {
@@ -31,7 +31,9 @@ const Blog = () => {
                 <p className='text-base text-mygray'>
                   We aim to bring innovative solutions to everyday problems and improve the quality of life. Our commitment to quality and sustainability drives everything we do. From designing functional products to ensuring customer satisfaction, we are always working towards a brighter future.
                 </p>
-                <button className='w-[120px] h-[36px] mt-4 border-b-2 border-myblack text-[16px] font-semibold text-myblack'>Read More</button>
+                <button className='w-[120px] h-[36px] mt-4 pt-4 border-b-2 border-myblack text-[16px] font-semibold text-myblack'>
+                  Read More
+                </button>
               </div>
 
               {/* About Section 2 */}
@@ -42,7 +44,9 @@ const Blog = () => {
                 <p className='text-base text-mygray'>
                   At the heart of our company lies a strong belief in honesty, sustainability, and creativity. We value hard work, dedication, and the ability to adapt to new challenges. Every day, we strive to live by these values and uphold them in everything we do.
                 </p>
-                <button className='w-[120px] h-[36px] mt-4 border-b-2 border-myblack text-[16px] font-semibold text-myblack'>Read More</button>
+                <button className='w-[120px] h-[36px] mt-4 pt-4 border-b-2 border-myblack text-[16px] font-semibold text-myblack'>
+                  Read More
+                </button>
               </div>
 
               {/* About Section 3 */}
@@ -53,7 +57,9 @@ const Blog = () => {
                 <p className='text-base text-mygray'>
                   Founded in [year], our company has continuously evolved, always looking for better ways to serve our community. Over the years, we've grown from a small startup to an industry leader. Our journey is one of resilience, innovation, and passion for what we do.
                 </p>
-                <button className='w-[120px] h-[36px] mt-4 border-b-2 border-myblack text-[16px] font-semibold text-myblack'>Read More</button>
+                <button className='w-[120px] h-[36px] mt-4 pt-4 border-b-2 border-myblack text-[16px] font-semibold text-myblack'>
+                  Read More
+                </button>
               </div>
             </div>
 
@@ -113,25 +119,24 @@ const Blog = () => {
                   <div className='flex justify-between items-center'>
                     <Image src={'/post3.png'} alt='update' width={80} height={80} />
                     <div>
-                      <h3 className='text-sm text-myblack'>handmade pieces that took time to made</h3>
+                      <h3 className='text-sm text-myblack'>Handmade pieces that took time to make</h3>
                       <p className='text-xs text-mygray'>03 Aug 2022</p>
                     </div>
                   </div>
                   <div className='flex justify-between items-center'>
                     <Image src={'/post4.png'} alt='update' width={80} height={80} />
                     <div>
-                      <h3 className='text-sm text-myblack'>Modern home in millan</h3>
+                      <h3 className='text-sm text-myblack'>Modern home in Milan</h3>
                       <p className='text-xs text-mygray'>03 Aug 2022</p>
                     </div>
                   </div>
                   <div className='flex justify-between items-center'>
                     <Image src={'/post5.png'} alt='update' width={80} height={80} />
                     <div>
-                      <h3 className='text-sm text-myblack'>Colorful office redisign</h3>
+                      <h3 className='text-sm text-myblack'>Colorful office redesign</h3>
                       <p className='text-xs text-mygray'>03 Aug 2022</p>
                     </div>
                   </div>
-                 
                 </div>
               </div>
             </div>
@@ -145,11 +150,9 @@ const Blog = () => {
           </div>
         </div>
       </section>
-      <CustomerCare/>
+      <CustomerCare />
     </>
-  )
-}
+  );
+};
 
 export default Blog;
-
-

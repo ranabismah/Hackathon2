@@ -3,7 +3,17 @@ import React from 'react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/Button';
 
-const productData = [
+// Define a Product interface for TypeScript
+interface Product {
+  image: string;
+  title: string;
+  description: string;
+  price: string;
+  oldPrice?: string;
+}
+
+// Product data
+const productData: Product[] = [
   {
     image: '/product1.png',
     title: 'Syltherine',
@@ -16,7 +26,6 @@ const productData = [
     title: 'Leviosa',
     description: 'Stylish cafe chair',
     price: 'Rp 2.500.000',
-    oldPrice: '',
   },
   {
     image: '/product3.png',
@@ -30,14 +39,12 @@ const productData = [
     title: 'Respira',
     description: 'Outdoor bar table and stool',
     price: 'Rp 500.000',
-    oldPrice: '',
   },
   {
     image: '/product5.png',
     title: 'Grifo',
     description: 'Night lamp',
     price: 'Rp 1.500.000',
-    oldPrice: '',
   },
   {
     image: '/product6.png',
@@ -58,28 +65,36 @@ const productData = [
     title: 'Potty',
     description: 'Minimalist flower pot',
     price: 'Rp 500.000',
-    oldPrice: '',
   },
 ];
 
-const ProductList = () => {
+// Main Product List Component
+const ProductList: React.FC = () => {
   return (
-    <section className="py-10 flex items-center justify-center w-full bg-white">
-      <div className="w-full max-w-screen-lg flex flex-col items-center space-y-8">
-        <h1 className="text-4xl font-bold text-myblack">Our Products</h1>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 w-full">
+    <section className="py-10 px-4 flex items-center justify-center w-full bg-white overflow-hidden">
+      <div className="w-full max-w-screen-lg flex flex-col items-center space-y-8 box-border">
+        {/* Title */}
+        <h1 className="text-4xl font-bold text-myblack text-center">Our Products</h1>
+
+        {/* Product Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full max-w-full">
           {productData.map((product, index) => (
             <div
               key={index}
-              className="relative group border border-gray-200 overflow-hidden"
+              className="relative group border border-gray-200 overflow-hidden rounded-lg shadow-md transition-all duration-300 hover:shadow-lg"
             >
-              <Image
-                src={product.image}
-                alt={product.title}
-                width={285}
-                height={301}
-                className="w-full"
-              />
+              {/* Product Image */}
+              <div className="w-full h-64 sm:h-72 md:h-80 lg:h-96 relative">
+                <Image
+                  src={product.image}
+                  alt={product.title}
+                  layout="fill"
+                  objectFit="cover"
+                  className="w-full h-full"
+                />
+              </div>
+
+              {/* Product Content */}
               <div className="p-4">
                 <h2 className="text-xl font-semibold text-myblack">{product.title}</h2>
                 <p className="text-sm text-mygray">{product.description}</p>
@@ -94,6 +109,7 @@ const ProductList = () => {
                   )}
                 </div>
               </div>
+
               {/* Hover Overlay */}
               <div className="absolute inset-0 bg-black/50 backdrop-blur-sm flex flex-col justify-center items-center space-y-4 opacity-0 group-hover:opacity-100 transition-all duration-300">
                 <Button variant="primary" size="sm">
@@ -117,18 +133,20 @@ const ProductList = () => {
             </div>
           ))}
         </div>
-        <Button
-  variant="products"
-  size="sx"
-  className="bg-[#B88E2F] text-white hover:bg-[#B88E2F]/80"
->
-  Show More
-</Button>
 
+        {/* Show More Button */}
+        <Button
+          variant="products"
+          size="xs"
+          className="bg-[#B88E2F] text-white hover:bg-[#B88E2F]/80 mt-6"
+        >
+          Show More
+        </Button>
       </div>
     </section>
   );
 };
 
 export default ProductList;
+
 
